@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./jquery-3.7.1.js"></script>
+</head>
+
+<body>
+  <p style="font-size: 30px;">zhangaqinag</p>
+  <button id="btn1">单击隐藏，双击显示</button>
+  <button id="btn2">单击淡入，双击淡出</button>
+  <button id="btn3">透明度</button>
+  <button id="btn4">按钮</button>
+  <button id="btn5">按钮</button>
+
+
+  <script>
+    $(document).ready(() => {
+      $('#btn1').click(() => $('p').hide())
+      $('#btn1').dblclick(() => $('p').show())
+
+      $('#btn2').click(() => $('p').fadeOut(3000))
+      $('#btn2').dblclick(() => $('p').fadeIn('fast'))
+
+      $('#btn3').click(() => $('p').fadeTo(3000, .5))
+    })
+  </script>
+</body>
+
+</html>
